@@ -1,18 +1,35 @@
 <!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<style>
+	#myModalLabel {
+		font-family:Helvetica;
+		font-weight:bold;
+		text-align:center;
+	}
+	
+	.centered {
+		text-align:center;
+	}
+	
+	.modal-footer {
+		text-align:center;
+	}
+	
+</style>
+
+<div id="findModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">Find</h3>
   </div>
   <div class="modal-body">
 
-<form>
-Book Title: <input type="text" name="booktitle"><br>
-Edition #: <input type="text" name="edition"><br>
-Author Name: <input type="text" name="authorname"><br>
-ISBN #: <input type="text" name="isbn"><br>
-# of copies: <input type="text" name="copies"><br>
 
+<form class="centered" method="POST" action="/need">
+	<input type="text" placeholder="Book Title"><br>
+	<input type="text" placeholder="Edition #"><br>
+	<input type="text" placeholder="Author Name"><br>
+	<input type="text" placeholder="ISBN #"><br>
+	<input type="text" placeholder="# of copies">
 </form>
 
 
