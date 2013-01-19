@@ -19,7 +19,7 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('A Secret String Available Publicly on Github! (I hope no one uses this to encrypt actual data!)'));
+  app.use(express.cookieParser('jklklnkln'));
   app.use(express.session());
   app.use(app.router);
   app.use(require('less-middleware')({ src: __dirname + '/public' }));
