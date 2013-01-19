@@ -1,12 +1,12 @@
 
       <div class="jumbotron">
-        <h1>Super awesome marketing speak!</h1>
+        <h1>Super-awesome marketing speak!</h1>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
         
 <!-- Button to trigger modal -->
-<a href="findmodal.ejs" role="button" class="btn" data-toggle="modal">Find</a>
-<a href="donatemodal.ejs" role="button" class="btn" data-toggle="modal">Donate</a>
+<a href="findmodal.ejs" role="button" class="btn" data-toggle="modal" data-target="#findModal">Find</a>
+<a href="donatemodal.ejs" role="button" class="btn" data-toggle="modal" data-target="#donateModal">Donate</a>
          
         
         
@@ -38,3 +38,6 @@
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>
+
+      <% include donatemodal %>
+      <% include findmodal %>
