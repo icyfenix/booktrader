@@ -28,3 +28,10 @@
 
       <% include donatemodal %>
       <% include findmodal %>
+<script>
+var bookTitles = [
+<% for (var i=0;i<books.length; i++) { %>
+  '<%=books.title%>',
+<% } %>
+]
+</script>
