@@ -32,7 +32,7 @@
 		<h3 id="myModalLabel">Request</h3>
 	</div>
 
-	<div class="modal-body">
+	<div id="replacerequestmodal" class="modal-body">
 		<form class="centered" method="POST" action="/have">
 			<input type="text" placeholder="Name" id="titledonate"><br>
 			<input type="text" placeholder="Email Address" ><br>
@@ -56,7 +56,7 @@
 
 	<div class="modal-footer">
     	<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    	<button class="btn btn-primary">Send</button>
+    	<button class="btn btn-primary" id="success_btn" data-toggle="modal" data-target="#successModal">Send</button>
 	</div>
 </div>
 
