@@ -1,3 +1,32 @@
+  <style>
+  
+  	#resultsname {
+  		
+  	font-style:bold;
+  	font-size:24px;
+  	font-family:'Open Sans', sans-serif;
+  	
+  	}
+  	
+  	#resultsisbn {
+  	
+  	font-style:bold;
+  	font-size:16px;
+  	font-family:'Open Sans', sans-serif;
+  	
+  	}
+  
+  	#bookinfo {
+  	font-style:bold;
+  	font-family:'Open Sans', sans-serif;
+  	}
+  
+  </style>
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  
+  
   <div id="results">
 <% if(num == 0 ) { %>
     <p> NO RESULTS </p>
@@ -14,36 +43,38 @@
         <!-- <strong>Publisher</strong>: <%= book.publisher %><br> -->
         
         <!-- BOOK TITLE EDITION ETC -->
+        <div id="bookinfo">
         
-		<h1><strong>Title </strong>:<%= book.title %></h1>  
+		<h1><strong>Title</strong>: <%= book.title %></h1>  
 		<h2><strong>Edition</strong>: <%= book.edition %></h2> 
-		<br> 
-        <h4><strong>Year</strong>: <%= book.year %></h4>  <hr width=1, size=20 />  <h4><strong>ISBN #</strong>: <%= book.isbn %></h4>
-        <br>
+        <h4><strong>Year</strong>: <%= book.year %></h4>  
+        <h4><strong>ISBN #</strong>: <%= book.isbn %></h4>
         <h4><strong>Publisher</strong>: <%= book.publisher %></h4>
-        <br>
+        
+        </div>
         
         <!-- TABLES OF SCHOOLS WITH THIS BOOK BEGINS BELOW -->
         
-        <hr />
     
         
-        
-        
-
-      
-
       </p>
     </div>
     <hr>
     <% for( var i = 0; i< results.length; i++ ) { %>
-      <p> <%= results[i].name %> : </p> <p> <%= results[i].has[isbn] %></p> <br>
+    	<div id="resultsname">
+      		<p> <%= results[i].name %>: </p> 
+      	</div>
+      	<div id="resultsisbn">
+      		<p> <%= results[i].has[isbn] %> available</p> 
+      	</div>
+      
+        <p>
+  			<button class="btn btn-primary" type="button">Request</button>
+		</p>
+      
+      <br>
     <% } 
     } %>
-    
-    <p>
-  	<button class="btn btn-primary" type="button">Request</button>
-	</p>
     
     
   </div>
