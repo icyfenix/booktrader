@@ -157,23 +157,26 @@
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-carousel.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js"></script>
     <script type="text/javascript">
-      $('#book_title_input').typeahead({
-        source: [
+      var book_titles = [
             <% for( var i =0; i < fake_books.length; i++ ){ %>
               "<%= fake_books[i]['title'] %>", <% } %>
-                ]
-      });
-      $('#book_author').typeahead({
-        source: [
+      ]
+      var book_authors = [
             <% for( var i =0; i < fake_books.length; i++ ){ %>
               "<%= fake_books[i]['author'] %>", <% } %>
-                ]
-      });
-      $('#book_isbn').typeahead({
-        source: [
+      ]
+      var book_isbns = [
             <% for( var i =0; i < fake_books.length; i++ ){ %>
               "<%= fake_books[i]['isbn'] %>", <% } %>
-                ]
+              ]
+      $('.book_title_input').typeahead({
+        source: book_titles
+      });
+      $('.book_author_input').typeahead({
+        source: book_authors
+      });
+      $('.book_isbn_input').typeahead({
+        source: book_isbns
       });
     </script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-affix.js"></script>
