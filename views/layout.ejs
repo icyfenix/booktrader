@@ -103,7 +103,12 @@
 
       <hr>
 
-<% include index %>
+<% if( page == 'index' ) { %>
+  <% include index %>
+<% } else if (page == 'results') { %>
+  <% include results %>
+<% } %>
+
 
 
 	  <hr>

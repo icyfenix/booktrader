@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('layout', { title: 'Express' });
+  res.render('layout', { page: 'index', title: 'Express' });
 };
 /*
  * POST /results
@@ -20,7 +20,7 @@ exports.results = function(req, res){
   }
   var results = []
   if( isbn == '' ) {
-    res.render('results', { num: 0 })
+    res.render('layout', { page: 'results', num: 0 })
   } else {
     for( var i=0; i< schools.length; i++ ) {
       if( isbn in schools[i].has ) {
@@ -28,7 +28,8 @@ exports.results = function(req, res){
       }
     }
 
-    res.render('results', { 
+    res.render('layout', { 
+      page: 'results',
       title: 'Results',
       num: results.length,
       results: results,
