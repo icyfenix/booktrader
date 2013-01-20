@@ -80,12 +80,23 @@
   <div id="results">
 <% if(num == 0 ) { %>
     <p> NO RESULTS </p>
-<% } else {
-    for( var i = 0; i< results.length; i++ ) { %>
+<% } else { %>
+    <div>
+      <img src=<%= book.cover %>></img>
+      <h1><strong>Title</strong>: <%= book.title %></h1>
+      <h2><strong>Edition</strong>: <%= book.edition %></h2>
+      <h3><strong>Year</strong>: <%= book.year %></h3>
+      <p>
+        <strong>Format</strong>: <%= book.format %><br>
+        <strong>Author</strong>: <%= book.author %><br>
+        <strong>Publisher</strong>: <%= book.publisher %><br>
+      </p>
+    </div>
+    <hr>
+    <% for( var i = 0; i< results.length; i++ ) { %>
       <p> <%= results[i].name %> : </p> <p> <%= results[i].has[isbn] %></p> <br>
     <% } 
     } %>
-
   </div>
 	  <hr>
 
