@@ -11,9 +11,11 @@ exports.index = function(req, res){
  */
 exports.results = function(req, res){
   var isbn = '';
+  var book = {};
   for(var i=0; i< fake_books.length; i++ ) {
     if( req.body.book.title == fake_books[i].title || req.body.book.isbn == fake_books[i].isbn ) {
       isbn = fake_books[i].isbn
+      book = fake_books[i]
     }
   }
   var results = []
@@ -31,7 +33,7 @@ exports.results = function(req, res){
       num: results.length,
       results: results,
       isbn: isbn,
-      books: fake_books
+      book: book
     });
   }
 };
