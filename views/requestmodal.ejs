@@ -1,14 +1,18 @@
 <!-- Modal -->
 <style>
-	body {
+	#requestModal {
 		border-style:solid;
-		border-width:10px;
+		border-width:5px;
 		border-color:#ccc;
+		background-color: #FFF5EE;
 	}
 	#myModalLabel {
 		font-weight:bold;
-		font-family:Helvetica; 
+		font-family: 'Domine', serif;
 		text-align:center;
+		font-size: 33px;
+		padding: 10px 0;
+		color: #0A8512;
 	}
 	.centered {
 		text-align:center;
@@ -17,6 +21,8 @@
 		text-align:center;
 	}	
 </style>
+
+<link href='http://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
 
 
 <div id="requestModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -29,8 +35,9 @@
 	<div class="modal-body">
 		<form class="centered" method="POST" action="/have">
 			<input type="text" placeholder="Name" id="titledonate"><br>
-			<input type="text" placeholder="Email" ><br>
-			<input type="text" placeholder="School" ><br>
+			<input type="text" placeholder="Email Address" ><br>
+						<input type="text" placeholder="School" ><br>
+			<div style="padding-bottom:10px;">
 			<input list="counties" placeholder="County">
 				<datalist id="counties">
 					<option value="San Francisco">
@@ -42,7 +49,7 @@
 					<option value="Solano">
 					<option value="Sonoma">
 				</datalist><br>
-			<input type="text" placeholder="Email" ><br>
+				</div>
 			<textarea rows="4" cols="50">Type your message here.</textarea><br>
 		</form>
 	</div>
