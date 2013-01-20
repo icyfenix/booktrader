@@ -2,33 +2,32 @@
 
 <style>
 	#findModal {
-		border-width:10px;
+		border-style:solid;
+		border-width:5px;
 		border-color:#ccc;
+		background-color: #FFF5EE;
 	}
-	
 	#myModalLabel {
-		font-family:Helvetica;
 		font-weight:bold;
+		font-family: 'Domine', serif;
 		text-align:center;
-
+		font-size: 33px;
+		padding: 10px 0;
+		color: #0A8512;
 	}
-	
 	.centered {
 		text-align:center;
-
 	}
-	
 	.modal-footer {
 		text-align:center;
-	}
-	
+	}		
 </style>
 
 
 <div id="findModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Find</h3>
+    <h3 id="myModalLabel">Request</h3>
   </div>
   <div class="modal-body">
 
@@ -39,7 +38,7 @@
 	<input type="text" class="book_title_input" name="book[title]" placeholder="Book Title" ><br>
 	<input type="text" name="book[edition]" placeholder="Edition #"><br>
 	<input type="text" class="book_author_input" name="book[author]" placeholder="Author Name"><br>
-	<input type="text" class="book_isbn_input" name="book[isbn]" placeholder="ISBN #*"><br>
+	<input type="text" class="book_isbn_input" name="book[isbn]" placeholder="ISBN #"><br>
 	<input type="text" name="num_copies" placeholder="# of copies">
 </form>
 
