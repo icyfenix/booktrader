@@ -1,0 +1,130 @@
+<HTML>
+<head>
+<title>Book Lists!</title>
+</head>
+<body>
+<script>
+
+
+
+var bookPear = 
+[{
+"title":"Elementary Statistics with CD 11th",
+"edition":"11th",
+"year":"2008",
+"format":"Book and CD-Rom",
+"author":"Mario F. Triola",
+"cover":"0321500245.jpg", "isbn":"0321500245,9780321500243",
+"publisher":"Pearson Education"
+},{
+"title":"Society : The Basics 11th",
+"edition":"11th",
+"year":"2010",
+"format":"Paperback",
+"author":"Macionis",
+"cover":"0205003788.jpg", "isbn":"0205003788,9780205003785",
+"publisher":"Prentice Hall PTR"
+},{
+"title":"Essentials of Sociology : A Down-to-Earth Approach 9th",
+"edition":"9th",
+"year":"2010",
+"format":"Paperback",
+"author":"James M. Henslin",
+"cover":"020576312X.jpg", "isbn":"020576312X,9780205763122",
+"publisher":"Prentice Hall PTR"
+},{
+"title":"Prebles' Artforms 10th",
+"edition":"10th",
+"year":"2010",
+"format":"Paperback",
+"author":"Duane Preble",
+"cover":"0205797539.jpg", "isbn":"0205797539,9780205797530",
+"publisher":"Prentice Hall PTR"
+},{
+"title":"Development Through the Lifespan 5th",
+"edition":"5th",
+"year":"2009",
+"format":"Hardcover",
+"author":"Laura E. Berk",
+"cover":"0205687938.jpg", "isbn":"0205687938,9780205687930",
+"publisher":"Allyn & Bacon"
+},{
+"title":"Abnormal Psychology 14th",
+"edition":"14th",
+"year":"2009",
+"format":"Hardcover",
+"author":"James N. Butcher",
+"cover":"0205594956.jpg", "isbn":"0205594956,9780205594955",
+"publisher":"Allyn & Bacon"
+},{
+"title":"Management 11th",
+"edition":"11th",
+"year":"2010",
+"format":"Hardcover",
+"author":"Robbins",
+"cover":"0132163845.jpg", "isbn":"0132163845,9780132163842",
+"publisher":"Prentice Hall PTR"
+},{
+"title":"Exceptional Learners : An Introduction to Special Education 12th",
+"edition":"12th",
+"year":"2010",
+"format":"Hardcover",
+"author":"Daniel P. Hallahan",
+"cover":"0137033702.jpg", "isbn":"0137033702,9780137033706",
+"publisher":"Prentice Hall PTR"
+},{
+"title":"Art History, Volume 1 4th",
+"edition":"4th",
+"year":"2010",
+"format":"Paperback",
+"author":"Marilyn Stokstad",
+"cover":"0205744206.jpg", "isbn":"0205744206,9780205744206",
+"publisher":"Prentice Hall PTR"
+},{
+"title":"Chemistry : The Central Science 11th",
+"edition":"11th",
+"year":"2007",
+"format":"Book and CD-Rom",
+"author":"Bruce E. Bursten",
+"cover":"0136006175.jpg", "isbn":"0136006175,9780136006176",
+"publisher":"Pearson Education"
+}];
+
+
+function showBook(book){
+	var bookdiv = document.createElement('div');
+
+	var bookCover = document.createElement('img');
+	var bookTitle = document.createElement('h1');
+	var bookEdition = document.createElement('h2');
+	var bookYear = document.createElement('h3');
+	var bookFormatAndAuthorAndPublisher = document.createElement('p');
+
+	bookCover.src = book.cover;
+	bookTitle.innerHTML = "<strong>Title</strong>: " + book.title;
+	bookEdition.innerHTML = "<strong>Edition</strong>: " + book.edition;
+	bookYear.innerHTML = "<strong>Year</strong>: " + book.year;
+	bookFormatAndAuthorAndPublisher.innerHTML = "<strong>Format</strong>: " + book.format + "<br/><strong>Author</strong>: " +book.author + "<br/><strong>Publisher</strong>: " + book.publisher;
+
+	bookdiv.appendChild(bookCover);
+	bookdiv.appendChild(bookTitle);
+	bookdiv.appendChild(bookEdition);
+	bookdiv.appendChild(bookYear);
+	bookdiv.appendChild(bookFormatAndAuthorAndPublisher);
+
+	return bookdiv;
+}
+
+for (var i= 0; i < bookPear.length; i++) {
+
+	mynewBookdiv = showBook(bookPear[i]);
+
+	document.body.appendChild(mynewBookdiv);
+}
+
+
+
+
+</script>
+
+
