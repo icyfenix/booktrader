@@ -30,7 +30,8 @@ exports.results = function(req, res){
       title: 'Results',
       num: results.length,
       results: results,
-      isbn: isbn
+      isbn: isbn,
+      books: fake_books
     });
   }
 };
