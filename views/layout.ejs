@@ -145,6 +145,11 @@
       $("#donate_btn").click(function() {
         $("#donate_form").submit();
       });
+       $("#success_btn").click(function() {
+        $("#replacerequestmodal").html(
+          '<img style="padding:0 0 15px 80px; display:block; margin:0 auto;" src="img/success-icon.png"><p style="font-size:18px;text-align:center;">Your request has been submitted.</p>'
+          )
+      });
     </script>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js"></script>
