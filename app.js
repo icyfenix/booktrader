@@ -29,6 +29,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.post('/results', routes.results);
+app.post('/donate_results', routes.donate_results);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
