@@ -6,11 +6,11 @@
   </div>
   <div class="modal-body">
 
-    <form>
-    Book Title: <input type="text" name="booktitle"><br>
-    Edition #: <input type="text" name="edition"><br>
-    Author Name: <input type="text" name="authorname"><br>
-    ISBN #: <input type="text" name="isbn"><br>
+    <form id="find_form" method="POST" action="/results">
+    Book Title: <input type="text" name="book[title]"><br>
+    Edition #: <input type="text" name="book[edition]"><br>
+    Author Name: <input type="text" name="book[authorname]"><br>
+    ISBN #: <input type="text" name="book[isbn]"><br>
     # of copies: <input type="text" name="copies"><br>
 
     </form>
@@ -21,6 +21,6 @@
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Find</button>
+    <button id="find_btn" class="btn btn-primary">Find</button>
   </div>
 </div>
