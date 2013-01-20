@@ -1,4 +1,8 @@
-<div>
+<div class="ResultsTitle">
+    <h1>Results:</h1>
+</div>
+
+<div class="Form">
 <form method="post" action="/results">
     Book Title: <%= book.title %><br>
     Book Edition: <%= book.edition %><br>
@@ -13,4 +17,9 @@
     School Telephone: <%= school.telephone %><br>
     <input type="submit" value="Submit">
 </form>
+</div>
+
+<div class="ResultsBody">
+    <p><%= school.name %> has X <%= book.title %></p>
+    <img src="http://www.byui.edu/Images/Admin_Offices/Facilities%20Management/service_request_button-lg-nonglow.jpg">
 </div>
