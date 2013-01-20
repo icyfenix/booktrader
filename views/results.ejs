@@ -27,6 +27,17 @@
   	font-family:'Open Sans', sans-serif;
   	}
   
+  	
+  
+    .bookimage {
+    float:left;
+    padding:0 10px 10px 0;
+    }
+    
+    .booktitle {
+    padding:0 0 0 10px;
+    }
+    
   </style>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   
@@ -34,22 +45,32 @@
 	<% if(num == 0 ) { %>
     	<p> NO RESULTS </p>
 	<% } else { %>
-    <div>
-      <img src=/img/<%= book.cover %>></img>
- 
-      <!-- <h1><strong>Title</strong>: <%= book.title %></h1> -->
-      <!-- <h2><strong>Edition</strong>: <%= book.edition %></h2> -->
-      <!-- <h3><strong>Year</strong>: <%= book.year %></h3> -->
-      <p>
-    	<!-- <strong>Format</strong>: <%= book.format %><br> -->
-        <!-- <strong>Author</strong>: <%= book.author %><br> -->
-        <!-- <strong>Publisher</strong>: <%= book.publisher %><br> -->
-        
-        <!-- BOOK TITLE EDITION ETC -->
-        <div id="bookinfo">
-        
-		<h1><strong>Title</strong>: <%= book.title %></h1>  
-		<h2><strong>Edition</strong>: <%= book.edition %></h2> 
+    <div id="booktable">
+      
+      <!-- <table cellpadding="5">
+      	<tr>
+      		<td><img src=/img/<%= book.cover %>></img> </td>
+      		<td><h1><strong>Title</strong>: <%= book.title %></h1> 
+ 		</tr>    	      
+		
+		</table> -->
+		
+		<img class="bookimage" src=/img/<%= book.cover %>></img>
+		
+		<h1 class="booktitle"> <%= book.title %></h1>
+		
+		
+		
+		
+		
+		
+		
+		<p>
+		
+		<div id="bookinfo">
+		
+		<br>
+		<h4><strong><%= book.edition %> Edition</strong></h2> 
         <h4><strong>Year</strong>: <%= book.year %></h4>  
         <h4><strong>ISBN #</strong>: <%= book.isbn %></h4>
         <h4><strong>Publisher</strong>: <%= book.publisher %></h4>
@@ -57,8 +78,6 @@
         </div>
         
         <!-- TABLES OF SCHOOLS WITH THIS BOOK BEGINS BELOW -->
-        
-    
         
       </p>
       </div>
