@@ -153,6 +153,26 @@
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-carousel.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript">
+      $('#book_title_input').typeahead({
+        source: [
+            <% for( var i =0; i < fake_books.length; i++ ){ %>
+              "<%= fake_books[i]['title'] %>", <% } %>
+                ]
+      });
+      $('#book_author').typeahead({
+        source: [
+            <% for( var i =0; i < fake_books.length; i++ ){ %>
+              "<%= fake_books[i]['author'] %>", <% } %>
+                ]
+      });
+      $('#book_isbn').typeahead({
+        source: [
+            <% for( var i =0; i < fake_books.length; i++ ){ %>
+              "<%= fake_books[i]['isbn'] %>", <% } %>
+                ]
+      });
+    </script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-affix.js"></script>
 
     <script src="http://twitter.github.com/bootstrap/assets/js/holder/holder.js"></script>
