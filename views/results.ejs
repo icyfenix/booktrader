@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><%= title %></title>
+    <title>Search Results</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -77,8 +77,16 @@
 
       <hr>
 
-<% include form_result %>
+  <div>
+<% if(num == 0 ) { %>
+    <p> NO RESULTS </p>
+<% } else {
+    for( var i = 0; i< results.length; i++ ) { %>
+      <p> <%= results[i].name %> : </p> <p> <%= results[i].has[isbn] %></p> <br>
+    <% } 
+    } %>
 
+  </div>
 	  <hr>
 
       <div class="footer">
