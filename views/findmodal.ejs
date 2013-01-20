@@ -1,4 +1,30 @@
 <!-- Modal -->
+
+<style>
+	#findModal {
+		border-width:10px;
+		border-color:#ccc;
+	}
+	
+	#myModalLabel {
+		font-family:Helvetica;
+		font-weight:bold;
+		text-align:center;
+
+	}
+	
+	.centered {
+		text-align:center;
+
+	}
+	
+	.modal-footer {
+		text-align:center;
+	}
+	
+</style>
+
+
 <div id="findModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -6,14 +32,17 @@
   </div>
   <div class="modal-body">
 
-    <form id="find_form" method="POST" action="/results">
-    Book Title: <input type="text" name="book[title]"><br>
-    Edition #: <input type="text" name="book[edition]"><br>
-    Author Name: <input type="text" name="book[authorname]"><br>
-    ISBN #: <input type="text" name="book[isbn]"><br>
-    # of copies: <input type="text" name="copies"><br>
 
-    </form>
+
+
+<form class="centered" method="POST" action="/need">
+	<input type="text" placeholder="Book Title" id="title"><br>
+	<input type="text" placeholder="Edition #"><br>
+	<input type="text" placeholder="Author Name"><br>
+	<input type="text" placeholder="ISBN #"><br>
+	<input type="text" placeholder="# of copies">
+</form>
+
 
 
 
@@ -24,3 +53,10 @@
     <button id="find_btn" class="btn btn-primary">Find</button>
   </div>
 </div>
+
+
+<script>
+
+	$('#title').typeahead(bookTitles);
+
+</script>
