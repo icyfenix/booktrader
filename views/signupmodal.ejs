@@ -1,0 +1,52 @@
+<!-- Modal -->
+
+<style>
+	#signupModal {
+		border-width:10px;
+		border-color:#ccc;
+	}
+	
+	#myModalLabel {
+		font-family:Helvetica;
+		font-weight:bold;
+		text-align:center;
+
+	}
+	
+	.centered {
+		text-align:center;
+
+	}
+	
+	.modal-footer {
+		text-align:center;
+	}
+	
+</style>
+
+
+<div id="signupModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Sign Up</h3>
+  </div>
+  
+  
+  <div class="modal-body">
+
+<form id="signup_form" class="centered" method="POST" action="/index">
+	<input type="text" placeholder="School Name" ><br>
+	<input type="text" placeholder="County"><br>
+	<input type="text" placeholder="Email Address"><br>
+	<input type="text" placeholder="Password"><br>
+	<input type="text" placeholder="Retype Password">
+</form>
+
+</div>
+
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button id="find_btn" class="btn btn-primary">Sign Up</button>
+  </div>
+</div>
+
