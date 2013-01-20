@@ -83,10 +83,9 @@
 <% } else { %>
     <div>
       <img src=/img/<%= book.cover %>></img>
-      <h1><strong>Title</strong>: <%= book.title %></h1>
-      <h2><strong>Edition</strong>: <%= book.edition %></h2>
-      <h3><strong>Year</strong>: <%= book.year %></h3>
-      <p>
+      <h1><%= book.title %></h1>
+      <h2><%= book.edition %> Edition</h2>
+        <strong>Year</strong>: <%= book.year %><br>
         <strong>Format</strong>: <%= book.format %><br>
         <strong>Author</strong>: <%= book.author %><br>
         <strong>Publisher</strong>: <%= book.publisher %><br>
