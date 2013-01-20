@@ -15,23 +15,25 @@
   	font-family:'Open Sans', sans-serif;
   	
   	}
-  
+  	
   	#bookinfo {
   	font-style:bold;
   	font-family:'Open Sans', sans-serif;
   	}
+  	
+  	#numfound{
+  	font-weight:600;
+  	font-size:30px;
+  	font-family:'Open Sans', sans-serif;
+  	}
   
   </style>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-  
-  
-  <div id="results">
-<% if(num == 0 ) { %>
-    <p> NO RESULTS </p>
-<% } else { %>
-    <%= num_books %>
+<div id="results">
+	<% if(num == 0 ) { %>
+    	<p> NO RESULTS </p>
+	<% } else { %>
     <div>
       <img src=/img/<%= book.cover %>></img>
  
@@ -59,8 +61,12 @@
     
         
       </p>
-    </div>
-    <hr>
+      </div>
+    
+    <div id="numfound">
+    	<hr>We found <%= num_books %> books in San Fransisco County! <hr>
+    	</div>
+    
     <% for( var i = 0; i< results.length; i++ ) { %>
     	
     	
