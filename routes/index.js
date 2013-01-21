@@ -12,6 +12,7 @@ exports.index = function(req, res){
 exports.results = function(req, res){
   var isbn = '';
   var book = {};
+  var num_books = 0
   for(var i=0; i< fake_books.length; i++ ) {
     if( req.body.book.title == fake_books[i].title || req.body.book.isbn == fake_books[i].isbn ) {
       isbn = fake_books[i].isbn
@@ -22,7 +23,6 @@ exports.results = function(req, res){
   if( isbn == '' ) {
     res.render('layout', { page: 'results', num: 0, num_books: 0 })
   } else {
-    var num_books = 0
     for( var i=0; i< schools.length; i++ ) {
       if( isbn in schools[i].has ) {
         results.push( schools[i] )
