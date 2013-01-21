@@ -82,9 +82,16 @@
       </p>
       </div>
     
+
+<% if (page == 'results' ) { %>
     <div id="numfound">
     	<hr>We found <%= num_books %> books in San Fransisco County! <hr>
     	</div>
+<% } else if ( page == 'donate_results') { %>
+    <div id="numfound">
+    	<hr>We need <%= num_books %> books in San Fransisco County! <hr>
+    	</div>
+      <% } %>
     
     <% for( var i = 0; i< results.length; i++ ) { %>
     	
@@ -96,11 +103,19 @@
       		<p> <%= results[i].name %>: </p> 
       	</div>
       	<div id="resultsisbn">
+<% if (page == 'results' ) { %>
       		<p> <%= results[i].has[isbn] %> available</p> 
+<% } else if ( page == 'donate_results') { %>
+      		<p> <%= results[i].needs[isbn] %> needed</p> 
+      <% } %>
       	</div>
       
         <p>
+<% if (page == 'results' ) { %>
   			<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#requestModal">Request</button>
+<% } else if ( page == 'donate_results') { %>
+  			<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#requestModal">Contact</button>
+      <% } %>
 		</p>
       
       <br>
